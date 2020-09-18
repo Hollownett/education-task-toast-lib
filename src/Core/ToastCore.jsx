@@ -29,7 +29,9 @@ class _Toast {
       icon,
       padding,
     } = toastProperties;
+
     const id = Math.floor(Math.random() * 101 + 1);
+
     switch (toastType) {
       case "success":
         toastProperties = {
@@ -88,6 +90,7 @@ class _Toast {
         };
     }
     if (toastList.length < 3) toastList = [...toastList, toastProperties];
+
     const containerDomNode = document.getElementById("notification-wrapper");
     ReactDOM.render(
       <Toast

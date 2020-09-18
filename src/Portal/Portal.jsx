@@ -3,10 +3,11 @@ import { createPortal } from "react-dom";
 
 const Portal = ({ children }) => {
   const mount = document.createElement("div");
-  const el = document.createElement("div");
-  el.setAttribute("id", "notification-wrapper");
   document.body.appendChild(mount);
   mount.setAttribute("id", "toast-root");
+
+  const el = document.createElement("div");
+  el.setAttribute("id", "notification-wrapper");
 
   useEffect(() => {
     mount.appendChild(el);

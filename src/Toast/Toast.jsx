@@ -4,14 +4,7 @@ import PropTypes from "prop-types";
 import { ToastWrapper } from "./components";
 
 export const Toast = (props) => {
-  const {
-    toastList,
-    position,
-    autoDelete,
-    autoDeleteTime,
-    animation,
-    animationSpeed,
-  } = props;
+  const { toastList, position, autoDelete, autoDeleteTime, animation } = props;
   const [list, setList] = useState([toastList]);
 
   useEffect(() => {
@@ -77,7 +70,7 @@ Toast.defaultProps = {
 };
 
 Toast.propTypes = {
-  toastList: PropTypes.array,
+  toastList: PropTypes.array.isRequired,
   position: PropTypes.string,
   autoDelete: PropTypes.bool,
   autoDeleteTime: PropTypes.number,
