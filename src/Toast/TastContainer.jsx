@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Portal } from "../Portal/Portal";
 
 export const ToastContainer = (props) => {
