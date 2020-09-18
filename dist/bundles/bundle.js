@@ -3,14 +3,14 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var styled = require('styled-components');
+var ReactDOM = require('react-dom');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
+var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -1273,7 +1273,7 @@ if (process.env.NODE_ENV !== 'production') {
 });
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  .notification-container {\n    font-size: 14px;\n    box-sizing: border-box;\n    position: fixed;\n    z-index: 999999;\n  }\n\n  .top-right {\n    top: 12px;\n    right: 12px;\n    transition: transform 0.6s ease-in-out;\n    animation: ", "\n      0.7s;\n  }\n\n  .bottom-right {\n    bottom: 12px;\n    right: 12px;\n    transition: transform 0.6s ease-in-out;\n    animation: ", "\n      0.7s;\n  }\n\n  .top-left {\n    top: 12px;\n    left: 12px;\n    transition: transform 0.6s ease-in;\n    animation: ", "\n      0.7s;\n  }\n\n  .bottom-left {\n    bottom: 12px;\n    left: 12px;\n    transition: transform 0.6s ease-in;\n    animation: ", "\n      0.7s;\n  }\n\n  .notification {\n    background: #fff;\n    transition: 0.3s ease;\n    position: relative;\n    pointer-events: auto;\n    overflow: hidden;\n    margin: 0 0 6px;\n    padding: 30px;\n    margin-bottom: 15px;\n    width: 300px;\n    max-height: 100px;\n    border-radius: 3px 3px 3px 3px;\n    box-shadow: 0 0 10px #999;\n    color: #000;\n    opacity: 0.9;\n    background-position: 15px;\n    background-repeat: no-repeat;\n  }\n\n  .notification:hover {\n    box-shadow: 0 0 12px #fff;\n    opacity: 1;\n    cursor: pointer;\n  }\n\n  .notification-title {\n    font-weight: 700;\n    font-size: 16px;\n    text-align: left;\n    margin-top: 0;\n    margin-bottom: 6px;\n    width: 300px;\n    height: 18px;\n  }\n\n  .notification-message {\n    margin: 0;\n    text-align: left;\n    height: 18px;\n    margin-left: -1px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n\n  .notification-image {\n    float: left;\n    margin-right: 15px;\n    margin-bottom: 15px;\n    margin-top: 7px;\n  }\n\n  .notification-image img {\n    width: 30px;\n    height: 30px;\n  }\n\n  .toast {\n    height: 50px;\n    width: 365px;\n    color: #fff;\n  }\n\n  .notification-container button {\n    position: relative;\n    right: -0.3em;\n    top: -0.3em;\n    float: right;\n    font-weight: 700;\n    color: #fff;\n    outline: none;\n    border: none;\n    text-shadow: 0 1px 0 #fff;\n    opacity: 0.8;\n    line-height: 1;\n    font-size: 16px;\n    padding: 0;\n    cursor: pointer;\n    background: 0 0;\n    border: 0;\n  }\n\n  @keyframes toast-in-right {\n    from {\n      transform: translateX(100%);\n    }\n    to {\n      transform: translateX(0);\n    }\n  }\n\n  @keyframes toast-from-top {\n    from {\n      transform: translateY(-100%);\n    }\n    to {\n      transform: translateY(0);\n    }\n  }\n\n  @keyframes toast-from-bottom {\n    from {\n      transform: translateY(100%);\n    }\n    to {\n      transform: translateY(0);\n    }\n  }\n\n  @keyframes toast-in-left {\n    from {\n      transform: translateX(-100%);\n    }\n    to {\n      transform: translateX(0);\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .notification-container {\n    font-size: 14px;\n    box-sizing: border-box;\n    position: fixed;\n    z-index: 999999;\n  }\n\n  .top-right {\n    top: 12px;\n    right: 12px;\n    transition: transform 0.6s ease-in-out;\n    animation: ", "\n      0.7s;\n  }\n\n  .bottom-right {\n    bottom: 12px;\n    right: 12px;\n    transition: transform 0.6s ease-in-out;\n    animation: ", "\n      0.7s;\n  }\n\n  .top-left {\n    top: 12px;\n    left: 12px;\n    transition: transform 0.6s ease-in;\n    animation: ", "\n      0.7s;\n  }\n\n  .bottom-left {\n    bottom: 12px;\n    left: 12px;\n    transition: transform 0.6s ease-in;\n    animation: ", "\n      0.7s;\n  }\n\n  .notification {\n    background: #fff;\n    transition: 0.3s ease;\n    position: relative;\n    pointer-events: auto;\n    overflow: hidden;\n    margin: 0 0 6px;\n    padding: 30px;\n    margin-bottom: 15px;\n    width: 300px;\n    max-height: 100px;\n    border-radius: 3px 3px 3px 3px;\n    box-shadow: 0 0 10px #999;\n    color: #000;\n    opacity: 0.9;\n    background-position: 15px;\n    background-repeat: no-repeat;\n  }\n\n  .notification:hover {\n    box-shadow: 0 0 12px #fff;\n    opacity: 1;\n    cursor: pointer;\n  }\n\n  .notification-title {\n    font-family: Helvetica;\n    font-weight: 700;\n    font-size: 24px;\n    text-align: left;\n    margin-top: 0;\n    margin-bottom: 6px;\n    width: 300px;\n    height: 18px;\n  }\n\n  .notification-message {\n    font-family: Helvetica;\n    margin-top: 5px;\n    font-size: 16px;\n    text-align: left;\n    height: 18px;\n    margin-left: -1px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n\n  .notification-image {\n    float: left;\n    margin-right: 15px;\n    margin-bottom: 15px;\n    margin-top: 7px;\n  }\n\n  .notification-image img {\n    width: 30px;\n    height: 30px;\n  }\n\n  .toast {\n    height: 50px;\n    width: 365px;\n    color: #fff;\n  }\n\n  .notification-container button {\n    position: relative;\n    right: -0.3em;\n    top: -0.3em;\n    float: right;\n    font-weight: 700;\n    color: #fff;\n    outline: none;\n    border: none;\n    text-shadow: 0 1px 0 #fff;\n    opacity: 0.8;\n    line-height: 1;\n    font-size: 16px;\n    padding: 0;\n    cursor: pointer;\n    background: 0 0;\n    border: 0;\n  }\n\n  @keyframes toast-in-right {\n    from {\n      transform: translateX(100%);\n    }\n    to {\n      transform: translateX(0);\n    }\n  }\n\n  @keyframes toast-from-top {\n    from {\n      transform: translateY(-100%);\n    }\n    to {\n      transform: translateY(0);\n    }\n  }\n\n  @keyframes toast-from-bottom {\n    from {\n      transform: translateY(100%);\n    }\n    to {\n      transform: translateY(0);\n    }\n  }\n\n  @keyframes toast-in-left {\n    from {\n      transform: translateX(-100%);\n    }\n    to {\n      transform: translateX(0);\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1412,7 +1412,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Success",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "",
+            description: description ? description : "description text message",
             backgroundColor: backgroundColor ? backgroundColor : "#5cb85c",
             icon: icon ? icon : succsessIcon,
             toastPadding: padding
@@ -1424,7 +1424,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Error",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "",
+            description: description ? description : "description text message",
             backgroundColor: backgroundColor ? backgroundColor : "#d9534f",
             icon: icon ? icon : errorIcon,
             toastPadding: padding
@@ -1436,7 +1436,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Info",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "",
+            description: description ? description : "description text message",
             backgroundColor: backgroundColor ? backgroundColor : "#9A40D3",
             icon: icon ? icon : infoIcon,
             toastPadding: padding
@@ -1448,7 +1448,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Warning",
             titleColor: titleColor ? titleColor : "#000000",
-            description: description ? description : "",
+            description: description ? description : "description text message",
             backgroundColor: backgroundColor ? backgroundColor : "#f0ad4e",
             icon: icon ? icon : warningIcon,
             toastPadding: padding
@@ -1460,7 +1460,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Custom",
             titleColor: titleColor ? titleColor : "#000000",
-            description: description ? description : "",
+            description: description ? description : "description text message",
             backgroundColor: backgroundColor ? backgroundColor : "#f2f2f2",
             icon: icon ? icon : succsessIcon,
             toastPadding: padding

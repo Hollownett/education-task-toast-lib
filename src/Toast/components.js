@@ -70,8 +70,9 @@ export const ToastWrapper = styled.div`
   }
 
   .notification-title {
+    font-family: Helvetica;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 24px;
     text-align: left;
     margin-top: 0;
     margin-bottom: 6px;
@@ -80,7 +81,9 @@ export const ToastWrapper = styled.div`
   }
 
   .notification-message {
-    margin: 0;
+    font-family: Helvetica;
+    margin-top: 5px;
+    font-size: 16px;
     text-align: left;
     height: 18px;
     margin-left: -1px;
