@@ -1412,7 +1412,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Success",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "description text message",
+            description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#5cb85c",
             icon: icon ? icon : succsessIcon,
             toastPadding: padding
@@ -1424,7 +1424,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Error",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "description text message",
+            description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#d9534f",
             icon: icon ? icon : errorIcon,
             toastPadding: padding
@@ -1436,7 +1436,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Info",
             titleColor: titleColor ? titleColor : "#FFFFFF",
-            description: description ? description : "description text message",
+            description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#9A40D3",
             icon: icon ? icon : infoIcon,
             toastPadding: padding
@@ -1448,7 +1448,7 @@ var _Toast = /*#__PURE__*/function () {
             id: toastId ? toastId : id,
             title: title ? title : "Warning",
             titleColor: titleColor ? titleColor : "#000000",
-            description: description ? description : "description text message",
+            description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#f0ad4e",
             icon: icon ? icon : warningIcon,
             toastPadding: padding
