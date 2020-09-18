@@ -1,0 +1,107 @@
+import React from "react";
+import { Toast } from "../Toast/Toast";
+import ReactDOM from "react-dom";
+import errorIcon from "../assets/error.svg";
+import infoIcon from "../assets/info.svg";
+import warningIcon from "../assets/warning.svg";
+import succsessIcon from "../assets/success.svg";
+
+let toastList = [];
+
+class _Toast {
+  constructor(toastList) {
+    this.toastList = toastList;
+  }
+
+  showToast(
+    toastType,
+    toastProperties,
+    toastPosition,
+    toastIsAutoDelete,
+    toastAutoDeleteTime,
+    animation
+  ) {
+    const {
+      toastId,
+      title,
+      description,
+      backgroundColor,
+      icon,
+      padding,
+    } = toastProperties;
+    const id = Math.floor(Math.random() * 101 + 1);
+    switch (toastType) {
+      case "success":
+        toastProperties = {
+          ...toastProperties,
+          id: toastId ? toastId : id,
+          title: title ? title : "Success",
+          description: description ? description : "",
+          backgroundColor: backgroundColor ? backgroundColor : "#5cb85c",
+          icon: icon ? icon : succsessIcon,
+          toastPadding: padding,
+        };
+        break;
+      case "error":
+        toastProperties = {
+          ...toastProperties,
+          id: toastId ? toastId : id,
+          title: title ? title : "Error",
+          description: description ? description : "",
+          backgroundColor: backgroundColor ? backgroundColor : "#d9534f",
+          icon: icon ? icon : errorIcon,
+          toastPadding: padding,
+        };
+        break;
+      case "info":
+        toastProperties = {
+          ...toastProperties,
+          id: toastId ? toastId : id,
+          title: title ? title : "Info",
+          description: description ? description : "",
+          backgroundColor: backgroundColor ? backgroundColor : "#9A40D3",
+          icon: icon ? icon : infoIcon,
+          toastPadding: padding,
+        };
+        break;
+      case "warning":
+        toastProperties = {
+          ...toastProperties,
+          id: toastId ? toastId : id,
+          title: title ? title : "Warning",
+          description: description ? description : "",
+          backgroundColor: backgroundColor ? backgroundColor : "#f0ad4e",
+          icon: icon ? icon : warningIcon,
+          toastPadding: padding,
+        };
+        break;
+
+      default:
+        toastProperties = {
+          ...toastProperties,
+          id: toastId ? toastId : id,
+          title: title ? title : "Custom",
+          description: description ? description : "",
+          backgroundColor: backgroundColor ? backgroundColor : "#f2f2f2",
+          icon: icon ? icon : succsessIcon,
+          toastPadding: padding,
+        };
+    }
+    if (toastList.length < 3) toastList = [...toastList, toastProperties];
+    const containerDomNode = document.getElementById("notification-wrapper");
+    ReactDOM.render(
+      <Toast
+        toastList={toastList}
+        position={toastPosition}
+        autoDelete={toastIsAutoDelete}
+        autoDeleteTime={toastAutoDeleteTime}
+        animation={animation}
+      />,
+      containerDomNode
+    );
+  }
+}
+
+const toast = new _Toast(toastList);
+
+export { toast };
