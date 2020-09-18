@@ -49,12 +49,26 @@ export const Toast = (props) => {
                 : "20px 15px 10px 10px",
             }}
           >
-            <button onClick={() => deleteToast(toast.id)}>X</button>
+            <button
+              onClick={() => deleteToast(toast.id)}
+              style={{
+                color: toast.titleColor,
+              }}
+            >
+              X
+            </button>
             <div className="notification-image">
               <img src={toast.icon} alt="" />
             </div>
             <div>
-              <p className="notification-title">{toast.title}</p>
+              <p
+                className="notification-title"
+                style={{
+                  color: toast.titleColor,
+                }}
+              >
+                {toast.title}
+              </p>
               <p className="notification-message">{toast.description}</p>
             </div>
           </div>

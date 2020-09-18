@@ -1296,8 +1296,7 @@ var Toast = function Toast(props) {
       position = props.position,
       autoDelete = props.autoDelete,
       autoDeleteTime = props.autoDeleteTime,
-      animation = props.animation,
-      animationSpeed = props.animationSpeed;
+      animation = props.animation;
 
   var _useState = React.useState([toastList]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -1345,6 +1344,9 @@ var Toast = function Toast(props) {
     }, /*#__PURE__*/React__default['default'].createElement("button", {
       onClick: function onClick() {
         return deleteToast(toast.id);
+      },
+      style: {
+        color: toast.titleColor
       }
     }, "X"), /*#__PURE__*/React__default['default'].createElement("div", {
       className: "notification-image"
@@ -1352,7 +1354,10 @@ var Toast = function Toast(props) {
       src: toast.icon,
       alt: ""
     })), /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("p", {
-      className: "notification-title"
+      className: "notification-title",
+      style: {
+        color: toast.titleColor
+      }
     }, toast.title), /*#__PURE__*/React__default['default'].createElement("p", {
       className: "notification-message"
     }, toast.description)));
@@ -1363,7 +1368,7 @@ Toast.defaultProps = {
   autoDelete: false
 };
 Toast.propTypes = {
-  toastList: propTypes.array,
+  toastList: propTypes.array.isRequired,
   position: propTypes.string,
   autoDelete: propTypes.bool,
   autoDeleteTime: propTypes.number,
@@ -1394,6 +1399,7 @@ var _Toast = /*#__PURE__*/function () {
       var _toastProperties = toastProperties,
           toastId = _toastProperties.toastId,
           title = _toastProperties.title,
+          titleColor = _toastProperties.titleColor,
           description = _toastProperties.description,
           backgroundColor = _toastProperties.backgroundColor,
           icon = _toastProperties.icon,
@@ -1405,6 +1411,7 @@ var _Toast = /*#__PURE__*/function () {
           toastProperties = _objectSpread2(_objectSpread2({}, toastProperties), {}, {
             id: toastId ? toastId : id,
             title: title ? title : "Success",
+            titleColor: titleColor ? titleColor : "#FFFFFF",
             description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#5cb85c",
             icon: icon ? icon : succsessIcon,
@@ -1416,6 +1423,7 @@ var _Toast = /*#__PURE__*/function () {
           toastProperties = _objectSpread2(_objectSpread2({}, toastProperties), {}, {
             id: toastId ? toastId : id,
             title: title ? title : "Error",
+            titleColor: titleColor ? titleColor : "#FFFFFF",
             description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#d9534f",
             icon: icon ? icon : errorIcon,
@@ -1427,6 +1435,7 @@ var _Toast = /*#__PURE__*/function () {
           toastProperties = _objectSpread2(_objectSpread2({}, toastProperties), {}, {
             id: toastId ? toastId : id,
             title: title ? title : "Info",
+            titleColor: titleColor ? titleColor : "#FFFFFF",
             description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#9A40D3",
             icon: icon ? icon : infoIcon,
@@ -1438,6 +1447,7 @@ var _Toast = /*#__PURE__*/function () {
           toastProperties = _objectSpread2(_objectSpread2({}, toastProperties), {}, {
             id: toastId ? toastId : id,
             title: title ? title : "Warning",
+            titleColor: titleColor ? titleColor : "#000000",
             description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#f0ad4e",
             icon: icon ? icon : warningIcon,
@@ -1449,6 +1459,7 @@ var _Toast = /*#__PURE__*/function () {
           toastProperties = _objectSpread2(_objectSpread2({}, toastProperties), {}, {
             id: toastId ? toastId : id,
             title: title ? title : "Custom",
+            titleColor: titleColor ? titleColor : "#000000",
             description: description ? description : "",
             backgroundColor: backgroundColor ? backgroundColor : "#f2f2f2",
             icon: icon ? icon : succsessIcon,
@@ -1476,10 +1487,10 @@ var toast = new _Toast(toastList);
 var Portal$1 = function Portal(_ref) {
   var children = _ref.children;
   var mount = document.createElement("div");
-  var el = document.createElement("div");
-  el.setAttribute("id", "notification-wrapper");
   document.body.appendChild(mount);
   mount.setAttribute("id", "toast-root");
+  var el = document.createElement("div");
+  el.setAttribute("id", "notification-wrapper");
   React.useEffect(function () {
     mount.appendChild(el);
     return function () {
