@@ -1,5 +1,6 @@
 import React from "react";
 import { Toast } from "../Toast/Toast";
+import { ToastContainer } from "../Toast/TastContainer";
 import ReactDOM from "react-dom";
 import errorIcon from "../assets/error.svg";
 import infoIcon from "../assets/info.svg";
@@ -77,7 +78,7 @@ class _Toast {
           title: title ? title : "Warning",
           titleColor: titleColor ? titleColor : "#000000",
           description: description ? description : "",
-          backgroundColor: backgroundColor ? backgroundColor : "#f0ad4e",
+          backgroundColor: backgroundColor ? backgroundColor : "#F4E048",
           icon: icon ? icon : warningIcon,
           toastPadding: padding,
         };
@@ -97,16 +98,16 @@ class _Toast {
     }
     if (toastList.length < 3) toastList = [...toastList, toastProperties];
 
-    const containerDomNode = document.getElementById("notification-wrapper");
-    ReactDOM.render(
-      <Toast
-        toastList={toastList}
-        position={toastPosition}
-        autoDelete={toastIsAutoDelete}
-        autoDeleteTime={toastAutoDeleteTime}
-        animation={animation}
-      />,
-      containerDomNode
+    return (
+      <ToastContainer>
+        <Toast
+          toastList={toastList}
+          position={toastPosition}
+          autoDelete={toastIsAutoDelete}
+          autoDeleteTime={toastAutoDeleteTime}
+          animation={animation}
+        />
+      </ToastContainer>
     );
   }
 }

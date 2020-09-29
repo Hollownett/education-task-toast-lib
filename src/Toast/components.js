@@ -53,10 +53,11 @@ export const ToastWrapper = styled.div`
     margin: 0 0 6px;
     padding: 30px;
     margin-bottom: 15px;
-    width: 300px;
-    max-height: 100px;
+    width: 668px;
+    max-height: 181px;
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 0 10px #999;
+    box-shadow: 4px 4px 8px #00000029;
+    border-radius: 24px;
     color: #000;
     opacity: 0.9;
     background-position: 15px;

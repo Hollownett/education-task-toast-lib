@@ -45,7 +45,7 @@ export const Toast = (props) => {
               backgroundColor: toast.backgroundColor,
               padding: toast.toastPadding
                 ? toast.toastPadding
-                : "20px 15px 10px 10px",
+                : "30px 20px 20px 25px",
             }}
           >
             <button

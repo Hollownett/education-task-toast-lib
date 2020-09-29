@@ -11,7 +11,10 @@ const Portal = ({ children }) => {
 
   useEffect(() => {
     mount.appendChild(el);
-    return () => mount.removeChild(el);
+    return () => {
+      mount.removeChild(el);
+      document.getElementById("toast-root").remove();
+    };
   }, [el, mount]);
 
   return createPortal(children, el);
