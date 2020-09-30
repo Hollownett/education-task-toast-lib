@@ -1,5 +1,4 @@
 import { toast } from "../Core/ToastCore";
-import { ToastContainer } from "../Toast/TastContainer";
 
 export default {
   title: "Toast",
@@ -7,7 +6,7 @@ export default {
     toastType: {
       control: {
         type: "inline-radio",
-        options: ["error", "warning", "success"],
+        options: ["error", "warning", "success", "info"],
       },
     },
     toastPosition: {
@@ -65,7 +64,7 @@ export default {
   },
 };
 
-export const Error = (args) =>
+export const ToastExample = (args) =>
   toast.showToast(
     args.toastType,
     {
@@ -82,7 +81,7 @@ export const Error = (args) =>
     args.animation
   );
 
-Error.args = {
+ToastExample.args = {
   toastType: "error",
   toastPosition: "top-right",
   toastIsAutoDelete: "true",
